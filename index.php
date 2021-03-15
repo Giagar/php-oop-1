@@ -34,22 +34,24 @@ class Fridge {
             return "No food in the fridge.";
         }
 
-        // $result = "<ul>";
+        $result = "";
 
-        // foreach($this->content as $obj) {
-        //     $result . $obj->name;
-        //     foreach($obj as $key=>$value) {
-        //         $result . "<li>{$value}</li>";
-        //     }
-        // }
+        foreach($this->content as $obj) {
+            // var_dump($obj);
+            // $result .= "<ul>";
+            foreach($obj as $key=>$value) {
+                var_dump($value);
+                // $result .= "<li>{$key}</li>";
+            }
+            // $result .= "</ul>";
+        }
 
-        // $result . "</ul>";
 
         // var_dump($result);
+        return $result;
+        // return "ok";
 
-        // return $result;
-
-        var_dump($this->content);
+        // var_dump($this->content);
     }
 
     // add items to content (only objects are allowed)
@@ -133,5 +135,5 @@ echo "<br>";
 
 $fridge3->add_food($food1);
 
-// echo "new content from fridge3: {$fridge3->get_content()}";
-$fridge3->get_content();
+echo "new content from fridge3: {$fridge3->get_content()}";
+// $fridge3->get_content();
